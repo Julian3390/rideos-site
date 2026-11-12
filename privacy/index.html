@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>RideOS — Privacy Policy</title>
+<title>Crew Up — Privacy Policy</title>
 <style>
   :root { color-scheme: light dark; }
   body { font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -17,107 +17,45 @@
 </style>
 </head>
 <body>
-<h1>RideOS — Privacy Policy</h1>
-<p class="updated">Last updated 22 October 2026</p>
+<h1>Crew Up — Privacy Policy</h1>
+<p class="updated">Last updated: 12 November 2026</p>
 
-<p>RideOS is a riding companion for motorcyclists. It records rides using the
-phone's own sensors and, when you choose to, lets you share your position with
-a group of riders. This policy describes exactly what it collects, where that
-goes, and what it never does.</p>
-
-<h2>No account, and no identity we can read</h2>
-<p>RideOS asks for no email address, no name, no phone number and no password.
-Group riding uses an anonymous identifier issued by our backend so that riders
-in the same group can be told apart. It is a random value. It is not linked to
-you, and we cannot use it to find out who you are.</p>
-
-<h2>What stays on your phone</h2>
-<p>Everything RideOS records is stored in a database on your device:</p>
+<p>Crew Up, formerly RideOS, helps motorcycle and car enthusiasts record rides and connect with other users. This notice describes the account, location and social information used by the app. Contact the developer at <a href="mailto:julian3390@gmail.com">julian3390@gmail.com</a> about privacy, content reports, or deletion requests.</p>
+<h2>Accounts and profiles</h2>
+<p>Accounts use an identifier and can have an email address, password, handle, display name, avatar, biography and date of birth. Supabase provides authentication and backend storage. Email addresses are used for account access and recovery, not displayed as public profile information. Session credentials remain on your device so you can stay signed in.</p>
+<p>The app uses the supplied date of birth for age-related controls, including its restriction on public map publishing for under-18 users. This is not independent age verification. The existing public-map age check runs in the app; this notice does not claim that every backend request independently verifies age.</p>
+<h2>Ride information on your device</h2>
+<p>The local database holds ride recordings and available sensor observations, route history, vehicle details, fuel entries and preferences. Ride recording does not depend on continuous internet access. A local ride recording is separate from information you choose to publish or share. Uninstalling can remove local information; it does not delete your cloud account or content already shared with others.</p>
+<h2>Location and sharing</h2>
+<p>Location is used for recording, map centering, weather and optional sharing. An active ride can request background location, including while the screen is locked. Permissions and operating-system behavior affect recording; background operation is not guaranteed after the app is forcibly closed.</p>
+<p>Group sharing sends position and selected signals to the backend under the session's sharing controls and expiry. Check the app's audience and freshness indicators. Some assistance signals ask to share a position explicitly. An arrival confirmation should not be interpreted as a published home address.</p>
+<p>Open World has separate choices for sharing with mutual followers and showing an approximate public vehicle marker. Both are off until enabled. Mutual sharing can reveal identity and a shared position to eligible mutuals. Public presence uses a roughly 400-metre grid rather than an exact position and does not display the account identity. Approximate location is not a guarantee of anonymity.</p>
+<p>A ride is not required for foreground Open World sharing. Outside an active ride, leaving the foreground stops regular presence updates. A previous position may remain until expiry or removal succeeds; timestamps distinguish recent information from stale information. Clusters are presentations of authorized presence, not proof that everyone is attending a meet or standing at a specific address.</p>
+<h2>Posts, stories and messages</h2>
+<p>Content you submit, including text, photos, videos and conversation content, is stored in the backend so the intended app audience can access it. Public social posts should not be treated as private messages. Audience rules differ between features. Blocking can restrict app visibility and contact, but cannot recall downloaded content or erase messages already received.</p>
+<p>Stories normally stop appearing to other users after 24 hours. Expiry is not deletion: rows, retained media files and downloaded copies have different lifetimes. The author may retain backend access to their own files. View lists are intended for the story author; likes are available to the author and the person who left the like.</p>
+<p>New supported story-photo uploads remove JPEG location metadata; text added in the editor is drawn into the uploaded picture. This does not remove location visible in the picture itself or establish that historical files were reprocessed.</p>
+<p>Story images use expiring signed links rather than public links. New links are subject to backend visibility rules. The app normally requests links lasting up to 15 minutes and no longer than the story's remaining lifetime. This is the app's requested lifetime, not a server-enforced maximum for every possible caller. A previously issued link can remain usable until its own expiry. Downloads, screenshots and content previously obtained through public links cannot be recalled.</p>
+<p>Messages and attachments are intended for conversation participants. No claim of end-to-end encryption is made. Some other social media files can have public URLs; do not assume every media feature has the same private-link protection as Stories.</p>
+<h2>Content checks, reports and blocking</h2>
+<p>Crew Up checks specified submitted story/post text for a limited set of explicit threats, hateful harassment and sexual-exploitation phrases. A refusal should explain the problem and keep the draft available to edit. This is limited text screening, not general language understanding or photo-pixel classification. No photo is sent to a new moderation vendor, no manual prepublication approval queue is introduced, and no account penalty is imposed by these checks.</p>
+<p>Use the app's report and block controls for abusive content or contact. Reports are stored for developer review. Reporting a story hides it from the reporter; some other reported content can be hidden pending review. Contact the developer using the email above for concerns. This notice does not promise an unmeasured response deadline.</p>
+<h2>Service providers and permissions</h2>
 <ul>
-  <li>GPS position, speed, heading and altitude, recorded while a ride is running</li>
-  <li>Accelerometer and gyroscope readings taken alongside those positions</li>
-  <li>Your ride history, motorcycles, fuel entries and settings</li>
+<li>Supabase handles accounts, shared records, media storage and backend services. Operational services may process request and security metadata.</li>
+<li>Mapbox, Google Maps or Apple Maps provide maps according to the selected provider and screen. Their requests reveal the viewed area and ordinary network metadata to that provider.</li>
+<li>Weather requests use Open-Meteo with a rounded location. Providers also receive ordinary network information such as an IP address.</li>
+<li>Permission-based notifications use a device token. Photos, camera, microphone and location permissions enable their corresponding features; manage permissions in device settings.</li>
 </ul>
-<p>None of this is uploaded. Deleting the app deletes it.</p>
-
-<h2>What leaves your phone, and when</h2>
-
-<h3>Weather</h3>
-<p>To show conditions and hazard warnings, RideOS sends a location to
-Open&#8209;Meteo (<code>api.open-meteo.com</code> and
-<code>air-quality-api.open-meteo.com</code>). That location is deliberately
-rounded to roughly five kilometres before it is sent, because weather does not
-change over a few streets and a precise position is not needed to look it up.
-No identifier is attached to the request.</p>
-
-<h3>Maps</h3>
-<p>Map tiles are fetched from Mapbox (<code>api.mapbox.com</code>) or drawn by
-Apple Maps, depending on which you have selected. Fetching a tile tells that
-provider roughly which area is being displayed. Their handling of those
-requests is governed by their own privacy policies.</p>
-
-<h3>Group riding</h3>
-<p>Nothing about a group ride leaves your phone unless you join a group and
-switch sharing on. When you do:</p>
+<h2>Retention and deletion</h2>
 <ul>
-  <li>Your position is sent to our backend so other riders in that group can see it</li>
-  <li>Sharing is always for a set time that you choose — 30 minutes, 2 hours or
-      6 hours. There is no option to share indefinitely.</li>
-  <li>When that time runs out your position is <em>erased</em> from the server,
-      not merely hidden from the display</li>
-  <li>Only riders in the same group can read it. This is enforced by the
-      database itself, not by the app's screens.</li>
-  <li>Quick signals you send ("need gas", "running late") are visible to that
-      group</li>
+<li>Local recordings remain on the device until removed or local app data is deleted.</li>
+<li>Shared presence is subject to expiry; a temporary failure can delay deletion or removal from another device's display.</li>
+<li>Story rows are configured for later cleanup after visibility expires. Picture files can remain stored, including orphaned uploads; there is currently no general automated orphan-file collector.</li>
+<li>Cloud profiles, messages, reports and other social content have no general automatic deletion period established for this release. They can remain stored until an applicable deletion or retention action is completed. Deleting an app is not a cloud-data deletion request.</li>
+<li>Use the in-app Delete my account action for account deletion, or contact the developer about an account or data request. Backups, security obligations and copies held by other users can limit immediate removal; do not assume that disappearing from a screen means every copy is erased.</li>
 </ul>
-<p>Some quick signals &mdash; "need gas", "wait for me", "on my way", "meet at
-stop" &mdash; attach where you are, so the group knows where to come. They do
-that only while your sharing is switched on. Send one with sharing off and it
-goes without a position, and the app tells you so as it sends. A position
-attached to a signal is erased from the server six hours after it was sent,
-which is the longest sharing window you can choose.</p>
-<p>"Need help" is the one exception: it attaches your position whether or not
-sharing is on, because the point of it is that your group can find you. The
-button asks you to confirm, and says it is about to share your position,
-before it sends anything.</p>
-<p>The signal "I'm home" never carries a location, by design, so that telling
-your group you have arrived does not disclose where you live.</p>
-<p>A group ride with no activity for 24 hours is closed automatically, and a
-closed ride and everything in it is deleted 30 days later.</p>
-
-<h2>What RideOS does not do</h2>
-<ul>
-  <li>No advertising, and no advertising identifiers</li>
-  <li>No analytics or crash-reporting services. There are no third-party
-      tracking SDKs in the app at all.</li>
-  <li>No selling or sharing of data with data brokers</li>
-  <li>No tracking you across other apps or websites</li>
-  <li>No background location collection when you are not recording a ride or
-      sharing with a group</li>
-</ul>
-
-<h2>Location permission</h2>
-<p>RideOS needs location access to do the one thing it exists for: record where
-and how you rode. If you grant "While Using", recording continues with the
-screen locked but can be interrupted by the system. "Always" makes long rides
-more reliable. You can revoke either at any time in iOS Settings; the app will
-keep working and simply stop recording.</p>
-
-<h2>Deleting your data</h2>
-<p>Ride data lives on your phone — delete a ride in the app, or delete the app,
-and it is gone. Anything shared with a group expires and is erased
-automatically; leaving a group removes your row from it immediately.</p>
-
-<h2>Children</h2>
-<p>RideOS is intended for licensed motorcycle riders and is not directed at
-children.</p>
-
-<h2>Changes</h2>
-<p>If this policy changes in a way that affects what is collected or who can
-see it, the updated date above will change and the new version will be
-published here before the change takes effect.</p>
-
-<h2>Contact</h2>
-<p>Questions about this policy: <a href="mailto:julian3390@gmail.com">julian3390@gmail.com</a></p>
+<h2>Changes and contact</h2>
+<p>We will update this notice when the app's data handling changes. Check the published date. Questions, deletion requests and concerns can be sent to <a href="mailto:julian3390@gmail.com">julian3390@gmail.com</a>.</p>
 </body>
 </html>
